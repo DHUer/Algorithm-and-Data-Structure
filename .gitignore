@@ -1,3 +1,5 @@
 *.o
 *.exe
+tempCodeRunnerFile.cpp
 TinyTest/
+settings.json
