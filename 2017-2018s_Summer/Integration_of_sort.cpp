@@ -260,7 +260,6 @@ template <class T> void Sort<T>::TableInsertSort(vector<T> &a)
   int p=t[0].next,re=0;
   while(p!=0)
   {
-    cout << t[p].value << " ";
     a[re++] = t[p].value;
     p = t[p].next;
   }
