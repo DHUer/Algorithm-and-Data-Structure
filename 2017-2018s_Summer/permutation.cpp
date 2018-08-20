@@ -1,4 +1,4 @@
-/*Perm(R)=(r1)Perm(R1)+(r2)Perm(R2)...+(r3)Perm(R3)*/
+/*Perm(R)=(r1)Perm(R1)+(r2)Perm(R2)...+(rn-1)Perm(Rn-1)*/
 #include<iostream>
 using namespace std;
 
