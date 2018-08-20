@@ -21,6 +21,7 @@ template<class T> void Perm(T a[],int k,int len)
 
 int main()
 {
+    
     int a[6] = {1, 2, 3, 4, 5, 6};
     Perm(a, 0, 6);
 }
