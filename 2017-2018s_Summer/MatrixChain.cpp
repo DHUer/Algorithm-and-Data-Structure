@@ -24,6 +24,7 @@ void MatrixChain(int **m,int n,int *p,int **s)
         {
             int j = i+r-1;
             m[i][j] = m[i + 1][j] + p[i - 1] * p[i] * p[j];//at the start, set k=i, so we get a default m[i][j]
+            s[i][j] = i;
             for (int k = i + 1; k < j;k++)
             {
                 int t = m[i][k] + m[k + 1][j] + p[i - 1] * p[k] * p[j];
@@ -37,6 +38,16 @@ void MatrixChain(int **m,int n,int *p,int **s)
     }
 }
 
+
+void TraceBack(int i,int j,int **s)
+{
+    if(i==j)
+        return;
+    TraceBack(i, s[i][j], s);
+    TraceBack(s[i][j] + 1, j, s);
+    cout << "Multiply A" << i << "," << s[i][j];
+    cout << "and A" << (s[i][j] + 1) << "," << j << endl;
+}
 int main()
 {
     int **m = new int *[N + 1];
@@ -54,8 +65,9 @@ int main()
     for (int i = 1; i <= N;i++)
     {
         for (int j = 1; j <= N;j++)
-            cout << m[i][j] << " ";
+            cout <<s[i][j] << " ";
         cout << endl;
     }
-        cout << m[1][N];
+    TraceBack(1, 6, s);
+    cout << m[1][N];
 }
