@@ -13,7 +13,7 @@ int bmax(int i,int j)
     for (int k = i+1; k <= j;k++)
     {
         int tem = floor(log(p[i]) / log(2)+1);
-        cout << tem << " ";
+        //cout << tem << " ";
         if(max<tem)
             max = tem;
     }
@@ -46,4 +46,3 @@ int main()
     cout <<endl<< endl;
     cout << s[N];
 }
-
