@@ -1,5 +1,5 @@
 # Algorithm-and-Data-Structure
-##好像有人说过...:
+## 好像有人说过...:
 >the essence of algorithm is compromise of time and space
 
 
